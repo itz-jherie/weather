@@ -18,7 +18,7 @@ body {
   justify-content: center;
 }
 
-.app.temp.warm {
+.app.warm {
   background-image: url('./assets/warm-bg.jpg');
 }
 
