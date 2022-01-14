@@ -6,14 +6,12 @@
 
 body {
   font-family: 'montseratt', sans-serif;
-  
-  
 }
 .app {
   background-image: url('./assets/cold-bg.jpg');
   background-size: cover;
   background-position: bottom;
-  transition: 0.4s ease-out;
+  transition: 1.4s ease-out;
   display: flex;
   justify-content: center;
 }
@@ -34,7 +32,7 @@ main{
   font-weight: bold;
   color: white;
   text-align: center;
-  margin-top: 40%;
+  margin-top: 20%;
   text-shadow: 2px 2px 5px black;
 }
 .date{
@@ -72,7 +70,7 @@ span {
 }
 
 .search-bar {
-  margin-top: 20px;
+  margin-top: 40px;
   text-align: center;
   border-radius: 10px;
   font-size: 20px;
@@ -81,4 +79,71 @@ span {
   border: none;
   background-color: rgba(255, 255, 255, 0.616);
   box-shadow: 2px 2px 1.2px 1px rgb(158, 154, 154);
+}
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+button{
+  width: 60%;
+  border-radius: 7px;
+  padding: 7px;
+  outline: none;
+  transition: 0.3s;
+  border: none;
+  font-size: 16px;
+  background-color: rgb(105, 105, 238);
+  color: white;
+}
+
+
+.list-container {  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "maxtemp"
+    "mintemp"
+    "windspeed"
+    "humidity"
+    "visibility"
+    "timezone"; 
+    margin-top: 30px;
+    color: white;
+    background: linear-gradient(rgba(255, 126, 126, 0.63), rgba(88, 88, 255, 0.432) );
+    padding: 20px 0px;
+    border-radius: 10px;
+}
+
+
+.maxtemp { grid-area: maxtemp; }
+
+.mintemp { grid-area: mintemp; }
+
+.windspeed { grid-area: windspeed; }
+
+.humidity { grid-area: humidity; }
+
+.visibility { grid-area: visibility; }
+
+.timezone { grid-area: timezone; }
+
+.list-container > div {
+  margin: 7px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  
+}
+.error{ 
+  background-color: rgba(255, 0, 0, 0.842);
+  padding: 16px 10px;
+  letter-spacing: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
 }
