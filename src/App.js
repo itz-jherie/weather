@@ -4,9 +4,7 @@ import './App.css';
 const api = {
   key: "c3acbdb0783f23253761b713751dcab4",
   keys: "55743b671ba718a00cfda57036966923",
-  base: "https://api.openweathermap.org/data/2.5",
-  fetch: "https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=55743b671ba718a00cfda57036966923",
-  getch2: "${api.base}weather?q=${query}&units=metric&appid=${api.keys}"
+  base: "https://api.openweathermap.org/data/2.5"
 }
 
 function App() {
@@ -21,7 +19,7 @@ function App() {
           .then(result =>  {
             setWeather(result);
             setQuery('');
-          if(result.cod == 404 || 400) {
+          if(result.cod === 404 || 400) {
             setError(result.message)
           }
           })
