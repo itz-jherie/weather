@@ -51,7 +51,6 @@ function App() {
           <div className='desc'>{weather.weather[0].main}</div>
           <div className='container'>
               <div>
-                <button>More</button>
                 <div className="list-container">
                   <div className="maxtemp">Max-temp: {(Math.round((weather.main.temp_max)-273.15))}°c</div>
                   <div className="mintemp">Min-temp: {(Math.round((weather.main.temp_min)-273.15))}°c</div>
